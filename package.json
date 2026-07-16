@@ -1,0 +1,20 @@
+{
+  "name": "studentdetails",
+  "version": "1.0.0",
+  "description": "Student Details Portal",
+  "main": "index.php",
+  "scripts": {
+    "build": "node build.js",
+    "build:js": "node build-js.js",
+    "build:css": "node build-css.js",
+    "watch": "node watch.js"
+  },
+  "devDependencies": {
+    "javascript-obfuscator": "^4.0.2",
+    "cssnano": "^6.0.1",
+    "postcss": "^8.4.31"
+  },
+  "keywords": ["student", "portal", "education"],
+  "author": "",
+  "license": "ISC"
+}

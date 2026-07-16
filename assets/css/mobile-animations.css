@@ -1,0 +1,1 @@
+@media (max-width:768px){@keyframes screenFlash{0%{opacity:0}to{opacity:0}}@keyframes centerFlash{0%{opacity:.5;transform:scale(0)}to{opacity:0;transform:scale(1.5)}}.achievement-toast{left:10px!important;max-width:280px;right:10px!important}}

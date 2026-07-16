@@ -1,0 +1,56 @@
+# Dependencies
+vendor/
+node_modules/
+
+# Environment and config
+.env
+.env.local
+.env.production
+
+# Logs
+*.log
+logs/
+pdf_error.log
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+temp_*
+upload_temp_results
+
+# Debug and test files
+debug_*.php
+test_*.php
+
+# Large files
+*.zip
+*.tar
+*.gz
+
+# Database
+*.sql.backup
+*.sqlite
+*.db
+
+# Cache
+.cache/
+*.cache
+
+# Uploads (if storing files locally)
+uploads/
+
+# Build backups
+assets/js/backup/
+assets/css/backup/

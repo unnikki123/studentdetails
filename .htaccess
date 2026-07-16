@@ -1,0 +1,46 @@
+# Disable directory browsing
+Options -Indexes
+
+# Protect sensitive files
+<FilesMatch "^(config\.php|composer\.(json|lock)|\.env|\.htaccess)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Protect log files
+<FilesMatch "\.(log|txt)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Block access to debug and test files
+<FilesMatch "^(debug_|test_).*\.php$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Prevent access to vendor directory
+RedirectMatch 404 ^/vendor/.*$
+
+# Prevent access to .git directory
+RedirectMatch 404 /\.git/.*$
+
+# Prevent access to .agents directory
+RedirectMatch 404 /\.agents/.*$
+
+# Enable strict transport security (uncomment if using HTTPS)
+# Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
+# Prevent clickjacking
+Header always set X-Frame-Options "SAMEORIGIN"
+
+# Prevent MIME type sniffing
+Header always set X-Content-Type-Options "nosniff"
+
+# Enable XSS protection
+Header always set X-XSS-Protection "1; mode=block"
+
+# Force HTTPS (uncomment if using HTTPS)
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
